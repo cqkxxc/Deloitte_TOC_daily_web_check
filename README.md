@@ -3,5 +3,5 @@ six website for toc daily web check
 
 ### 如何使用
 ###### 1.安装 selenium-4.4.3
-###### 2.将webdriver 
+###### 2.安装installer文件夹里的webdriver，如何安装请参考installer文件夹里的readme
 ###### 3.终端执行命令python3 main.py
