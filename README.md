@@ -2,7 +2,7 @@
 six website for toc daily web check
 
 # 如何使用
-### 我使用的python版本为3.10
+### 使用的python版本为3.10
 ###### 1.安装 selenium-4.4.3
 selenium官方入门指南https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started/
 ###### 2.安装installer文件夹里的webdriver
