@@ -25,6 +25,7 @@ class DAD:
 
     @staticmethod
     def get_date_time(driver, result):
+        # TODO
         sleep(10)
         driver.find_element(By.LINK_TEXT, "Audit Quality Milestones").click()
         result += driver.find_element(By.XPATH,
