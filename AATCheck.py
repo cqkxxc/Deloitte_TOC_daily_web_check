@@ -4,6 +4,8 @@ from Browser import Browser
 
 
 class AAT:
+    # TODO
+    # 需完善页面加载错误的处理
 
     @staticmethod
     def check():
