@@ -14,20 +14,24 @@ class DAD:
     def check():
         result = ""
 
-        driver = Browser.open("https://auditqualityhk.cn.deloitte.cn/")
-        result = DAD.get_date_time(driver, result)
-        driver.quit()
+        dad_dict = {"hk节点": "https://auditqualityhk.cn.deloitte.cn/",
+                    "prc节点": "https://auditqualityprc.cn.deloitte.cn/"}
 
-        driver = Browser.open("https://auditqualityprc.cn.deloitte.cn/")
-        result = DAD.get_date_time(driver, result)
-        driver.quit()
+        for site in dad_dict:
+            driver = Browser.open(dad_dict[site])
+            result = DAD.get_date_time(driver, result, site)
+            driver.quit()
+
+        # driver = Browser.open("https://auditqualityprc.cn.deloitte.cn/")
+        # result = DAD.get_date_time(driver, result)
+        # driver.quit()
         return result
 
     @staticmethod
-    def get_date_time(driver, result):
-        # TODO
+    def get_date_time(driver, result, site):
         sleep(10)
         driver.find_element(By.LINK_TEXT, "Audit Quality Milestones").click()
-        result += driver.find_element(By.XPATH,
-                                      "/html/body/app-root/div/div[2]/div/ng-component/div/app-subheader/div[1]/div[4]").text+"/"
+        sleep(5)
+        result += "%s同步时间 %s\n" % (site, driver.find_element(By.XPATH,
+                                                            "/html/body/app-root/div/div[2]/div/ng-component/div/app-subheader/div[1]/div[4]").text)
         return result

@@ -1,5 +1,6 @@
 from AATCheck import AAT
 from DADCheck import DAD
+from EmsOnlieCheck import EmsOnline
 from GapViewCheck import GapView
 from MarsCheck import Mars
 from SHCameraCheck import SH_Camera
@@ -62,5 +63,5 @@ class CheckController:
         :return: 页面检查结果正常或异常
         """
         # TODO
-        result = ems_online.check()
+        result = EmsOnline.check()
         return result
