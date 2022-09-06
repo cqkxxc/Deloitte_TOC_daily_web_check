@@ -11,7 +11,9 @@ class AAT:
 
         result = ""
 
-        driver = webdriver.Edge()
+        option = webdriver.EdgeOptions()
+        option.add_experimental_option('excludeSwitches', ['enable-logging'])
+        driver = webdriver.Edge(options=option)
         driver.get("https://aatsh.cn.deloitteresources.com")
         try:
             if driver.find_element(By.XPATH,
@@ -22,7 +24,9 @@ class AAT:
             result += "sh节点异常!!!"
             driver.quit()
 
-        driver = webdriver.Edge()
+        option = webdriver.EdgeOptions()
+        option.add_experimental_option('excludeSwitches', ['enable-logging'])
+        driver = webdriver.Edge(options=option)
         driver.get("https://aatse.cn.deloitteresources.com")
         try:
             if driver.find_element(By.XPATH,
@@ -33,7 +37,9 @@ class AAT:
             result += "se节点异常!!!"
             driver.quit()
 
-        driver = webdriver.Edge()
+        option = webdriver.EdgeOptions()
+        option.add_experimental_option('excludeSwitches', ['enable-logging'])
+        driver = webdriver.Edge(options=option)
         driver.get("https://aathk.cn.deloitteresources.com")
         try:
             if driver.find_element(By.XPATH,

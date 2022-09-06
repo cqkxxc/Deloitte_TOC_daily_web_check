@@ -14,6 +14,12 @@ class CheckView:
         print("AAT检查结果:\n" + self.check_controller.check_aat()+"\n")
         print("DAD检查结果:\n" + self.check_controller.check_dad())
         print("EMS Online检查结果:\n" + self.check_controller.check_ems_online())
+        # print("GapView检查结果：\n" + self.check_controller.check_gap_view() + "\n",
+        #       "Mar检查结果：\n" + self.check_controller.check_mars() + "\n",
+        #       "SH monitor文件检查结果：\n" + self.check_controller.check_camera_file() + "\n",
+        #       "AAT检查结果:\n" + self.check_controller.check_aat()+"\n",
+        #       "DAD检查结果:\n" + self.check_controller.check_dad(),
+        #       "EMS Online检查结果:\n" + self.check_controller.check_ems_online())
         print("检查完成")
 
     def main(self):

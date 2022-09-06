@@ -8,8 +8,11 @@ class Browser:
 
     @staticmethod
     def open(url):
+        # 设置终端不打印DevTools信息
+        option = webdriver.EdgeOptions()
+        option.add_experimental_option('excludeSwitches', ['enable-logging'])
         # 打开浏览器并自动最大化
-        driver = webdriver.Edge()
+        driver = webdriver.Edge(options=option)
         driver.maximize_window()
         # 设置全局等待元素时间为10秒
         driver.implicitly_wait(10)
