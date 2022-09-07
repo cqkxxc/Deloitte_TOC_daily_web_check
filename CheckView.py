@@ -2,6 +2,9 @@ from CheckController import CheckController
 
 
 class CheckView:
+    """
+        信息输出
+    """
     def __init__(self):
         self.check_controller = CheckController()
 
