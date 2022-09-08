@@ -4,12 +4,17 @@ from Browser import Browser
 
 
 class AAT:
-    # TODO
+    """
+        检查三个AAT页面是否正常运行
+    """
     # 需完善页面加载错误的处理
 
     @staticmethod
     def check():
-
+        """
+            依次创建三个webdriver对象(目前使用browser对象会出现页面无法加载的BUG，待排查)并检查页面元素是否正常加载
+        :return str,页面异常或正常
+        """
 
         result = ""
 

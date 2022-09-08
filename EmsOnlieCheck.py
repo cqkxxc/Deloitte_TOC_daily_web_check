@@ -5,11 +5,17 @@ from selenium.webdriver.common.by import By
 from Browser import Browser
 
 
-# TODO
 class EmsOnline:
+    """
+        EMS在线平台检查
+    """
 
     @staticmethod
     def check():
+        """
+            检查三个EMS平台并检查有无页面元素生成
+        :return: str, 检查结果
+        """
         result = ""
         # 打开浏览器并访问地址
         driver = Browser.open("https://daemsolcft.cn.deloitteresources.com/")
@@ -51,6 +57,3 @@ class EmsOnline:
             result += 'SH SOE节点异常！！!\n'
 
         return result
-
-
-

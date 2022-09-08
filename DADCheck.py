@@ -12,6 +12,10 @@ class DAD:
 
     @staticmethod
     def check():
+        """
+            检查两个AUDITONLINE平台的数据同步日期
+        :return str, 返回两个平台的数据同步日期
+        """
         result = ""
 
         dad_dict = {"hk节点": "https://auditqualityhk.cn.deloitte.cn/",
