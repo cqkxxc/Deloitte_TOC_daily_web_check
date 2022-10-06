@@ -10,7 +10,7 @@ def send_mail(to_list, subject, content):
     """
         发送电子邮件
     """
-    me = "CN TOC WEB CHECK" + "<" + mail_user + "@" + mail_postfix + ">"
+    me = "CNTOC Daliy WEB CHECK" + "<" + mail_user + "@" + mail_postfix + ">"
     msg = MIMEText(content, 'plain', 'utf-8')
     msg['Subject'] = subject
     msg['From'] = me
@@ -20,3 +20,7 @@ def send_mail(to_list, subject, content):
     s.connect(mail_host)
     s.sendmail(me, to_list, msg.as_string())
     s.close()
+
+# test
+# content="test"
+# send_mail("chuaxu@deloitte.com.cn", "Daily Web Check Result", content)

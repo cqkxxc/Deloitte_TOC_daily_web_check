@@ -59,8 +59,11 @@ class CheckController:
     @staticmethod
     def check_ems_online():
         """
-            检查EMS ONLIE页面
+            检查EMS ONLINE页面
         :return: 页面检查结果正常或异常
         """
-        result = EmsOnline.check()
-        return result
+        try:
+            result = EmsOnline.check()
+            return result
+        except Exception:
+            return "EMS ONLINE检查流程出错,请手动检查"
