@@ -26,7 +26,7 @@ class GapView:
         # 比较有无版本号异常,若有异常，则打印信息
         for number in cn_number:
             if number != us_number:
-                return "EMS版本号异常!!"
+                return "EMS版本号异常!!请确认https://daalerts1.da.deloitteresources.com/AlertsDashboard/Views/CDSGapView.aspx"
             else:
                 return "EMS版本号正常"
 

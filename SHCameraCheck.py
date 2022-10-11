@@ -38,7 +38,7 @@ class SH_Camera:
                 return "正常生成视频截图文件"
         else:
             driver.quit()
-            return "未正常生成截图文件!!"
+            return "未正常生成截图文件!!请确认file://cnshawins19t01/RecordFile/"
 
     @staticmethod
     def __get_all_date(driver):

@@ -66,4 +66,4 @@ class CheckController:
             result = EmsOnline.check()
             return result
         except Exception:
-            return "EMS ONLINE检查流程出错,请手动检查"
+            return "Audit ONLINE检查流程出错,请手动检查https://daemsolcft.cn.deloitteresources.com/"

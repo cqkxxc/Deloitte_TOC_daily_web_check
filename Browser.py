@@ -11,6 +11,10 @@ class Browser:
         # 设置终端不打印DevTools信息
         option = webdriver.EdgeOptions()
         option.add_experimental_option('excludeSwitches', ['enable-logging'])
+        # 静默启动
+        # option.add_argument('--headless')
+        # option.add_argument('window-size=1920x1080')
+        # option.add_argument('--start-maximized')
         # 打开浏览器并自动最大化
         driver = webdriver.Edge(options=option)
         driver.maximize_window()

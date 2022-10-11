@@ -36,6 +36,11 @@ class DAD:
         sleep(10)
         driver.find_element(By.LINK_TEXT, "Audit Quality Milestones").click()
         sleep(5)
-        result += "%s同步时间 %s\n" % (site, driver.find_element(By.XPATH,
-                                                            "/html/body/app-root/div/div[2]/div/ng-component/div/app-subheader/div[1]/div[4]").text)
-        return result
+        try:
+            result += "%s同步时间 %s\n" % (site, driver.find_element(By.XPATH,
+                                                                "/html/body/app-root/div/div[2]/div/ng-component/div/app-subheader/div[1]/div[4]").text)
+            return result
+        except Exception:
+            return "Quality Dashboard 检查异常，请手动确认"+site
+
+

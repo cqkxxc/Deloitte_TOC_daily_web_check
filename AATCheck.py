@@ -28,7 +28,7 @@ class AAT:
                 result += "sh节点正常。"
                 driver.quit()
         except Exception:
-            result += "sh节点异常!!!"
+            result += "sh节点异常!!!请确认https://aatsh.cn.deloitteresources.com"
             driver.quit()
 
         option = webdriver.EdgeOptions()
@@ -41,7 +41,7 @@ class AAT:
                 result += "se节点正常。"
                 driver.quit()
         except Exception:
-            result += "se节点异常!!!"
+            result += "se节点异常!!!请确认https://aatse.cn.deloitteresources.com"
             driver.quit()
 
         option = webdriver.EdgeOptions()
@@ -54,7 +54,7 @@ class AAT:
                 result += "hk节点正常。"
                 driver.quit()
         except Exception:
-            result += "hk节点异常!!!"
+            result += "hk节点异常!!!请确认https://aathk.cn.deloitteresources.com"
             driver.quit()
 
         return result

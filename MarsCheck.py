@@ -47,7 +47,7 @@ class Mars:
             Mars.result += "Timesheet正常"
             driver.close()
         else:
-            Mars.result += "Timesheet异常!!!"
+            Mars.result += "Timesheet异常!!!请确认https://mars.deloitte.com.cn/mars-platform-web/s"
             driver.close()
 
     @staticmethod
@@ -68,6 +68,6 @@ class Mars:
             Mars.result += "TRAVEL & EXPENSE正常,"
             driver.close()
         else:
-            Mars.result += "TRAVEL & EXPENSE异常!!!,"
+            Mars.result += "TRAVEL & EXPENSE异常!!!,请确认https://mars.deloitte.com.cn/mars-platform-web/s"
             driver.close()
         return windows
