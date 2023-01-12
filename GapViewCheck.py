@@ -6,6 +6,7 @@ class GapView:
     """
     检查GapView网站
     """
+
     @staticmethod
     def check():
         """
@@ -18,17 +19,21 @@ class GapView:
         driver.find_element(By.XPATH, "/html/body/div/form/div[3]/div[2]/div[1]/ul/li[2]/a").click()
         driver.find_element(By.XPATH, "/html/body/div/form/div[5]/div/div[1]/a[2]").click()
         # 判断检查项有无异常
-        # 获取US版本号
-        us_number = driver.find_element(By.XPATH,
-                                        "/html/body/div/form/div[5]/div/div[4]/div[2]/div/div/div[1]/div[1]/table/tr[2]/td[31]/div").text
-        # 获取CN版本号
-        cn_number = GapView.__get_edition_number(driver)
-        # 比较有无版本号异常,若有异常，则打印信息
-        for number in cn_number:
-            if number != us_number:
-                return "EMS版本号异常!!请确认https://daalerts1.da.deloitteresources.com/AlertsDashboard/Views/CDSGapView.aspx"
-            else:
-                return "EMS版本号正常"
+        try:
+            # 获取US版本号
+            us_number = driver.find_element(By.XPATH,
+                                            "/html/body/div/form/div[5]/div/div[4]/div[2]/div/div/div[1]/div[1]/table/tr[2]/td[31]/div").text
+            # 获取CN版本号
+            cn_number = GapView.__get_edition_number(driver)
+            # 比较有无版本号异常,若有异常，则打印信息
+
+            for number in cn_number:
+                if number != us_number:
+                    return "EMS版本号异常!!请确认https://daalerts1.da.deloitteresources.com/AlertsDashboard/Views/CDSGapView.aspx"
+                else:
+                    return "EMS版本号正常"
+        except Exception:
+            return "gapview检查流程异常，请手动检查"
 
     @staticmethod
     def __get_edition_number(driver):
