@@ -20,7 +20,7 @@ class GapView:
         # 判断检查项有无异常
         # 获取US版本号
         us_number = driver.find_element(By.XPATH,
-                                        "/html/body/div/form/div[5]/div/div[4]/div[2]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[12]/div").text
+                                        "/html/body/div/form/div[5]/div/div[4]/div[2]/div/div/div[1]/div[1]/table/tr[2]/td[31]/div").text
         # 获取CN版本号
         cn_number = GapView.__get_edition_number(driver)
         # 比较有无版本号异常,若有异常，则打印信息

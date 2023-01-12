@@ -20,7 +20,7 @@ class CheckView:
         # print("EMS Online检查结果:\n" + self.check_controller.check_ems_online())
         # print("检查完成")
 
-        result = "Web页面检查结果：" + "\n" + "GapView检查结果：" + self.check_controller.check_gap_view() + "\n" + "Mar检查结果：" + self.check_controller.check_mars() + "\n" + "SH monitor文件检查结果：" + self.check_controller.check_camera_file() + "\n" + "AAT检查结果:" + self.check_controller.check_aat() + "\n" + "DAD检查结果:" + self.check_controller.check_dad() + "\n" + "EMS Online检查结果:" + self.check_controller.check_ems_online()
+        result = "Web页面检查结果：" + "\n" + "GapView检查结果：" + self.check_controller.check_gap_view() + "\n" + "Mar检查结果：" + self.check_controller.check_mars() + "\n" + "SH monitor文件检查结果：" + self.check_controller.check_camera_file() + "\n" + "AAT检查结果:" + self.check_controller.check_aat() + "\n" + "DAD检查结果:" + self.check_controller.check_dad() + "\n" + "Audit Online检查结果:" + self.check_controller.check_ems_online()
 
         return result
 

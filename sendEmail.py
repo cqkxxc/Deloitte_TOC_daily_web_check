@@ -20,7 +20,3 @@ def send_mail(to_list, subject, content):
     s.connect(mail_host)
     s.sendmail(me, to_list, msg.as_string())
     s.close()
-
-# test
-# content="test"
-# send_mail("chuaxu@deloitte.com.cn", "Daily Web Check Result", content)
