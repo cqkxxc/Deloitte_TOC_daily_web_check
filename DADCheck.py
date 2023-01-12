@@ -41,6 +41,6 @@ class DAD:
                                                                 "/html/body/app-root/div/div[2]/div/ng-component/div/app-subheader/div[1]/div[4]").text)
             return result
         except Exception:
-            return "Quality Dashboard 检查异常，请手动确认"+site
+            return "Quality Dashboard 检查异常，请手动确认"+site+"https://auditqualityprc.cn.deloitte.cn/milestone"
 
 
